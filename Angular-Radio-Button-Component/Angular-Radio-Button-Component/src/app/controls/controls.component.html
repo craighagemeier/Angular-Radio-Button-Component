@@ -1,0 +1,8 @@
+<form [formGroup]="controlsFormGroup">
+  <div *ngIf="controlsFormGroup">
+    <app-radio [parentFormGroup]="controlsFormGroup"></app-radio>
+  </div>
+  <button class="btn btn-primary mb-3" (click)="save()" >Save</button>
+  <div>You want to drink {{radioExample.value}}.</div>
+  <!--<div>{{controlsFormGroup.value.radioExample}}</div>-->
+</form>
