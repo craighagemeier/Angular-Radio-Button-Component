@@ -1,0 +1,39 @@
+.form-radio-inline {
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  margin-right: 8px;
+}
+
+.form-radio-label {
+  display: block;
+  align-items: center;
+  position: relative;
+  padding-left: 28px;
+  padding-right: 10px;
+  margin-bottom: 28px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+
+.form-radio-input input {
+  position: absolute;
+  opacity: 0;
+}
+
+.form-radio-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #666666;
+  background-color: #ffffff;
+  margin-right: 80px;
+}
