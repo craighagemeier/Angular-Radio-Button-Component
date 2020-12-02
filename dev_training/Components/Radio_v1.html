@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<style>
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    padding-right: 10px;
+    margin-bottom: 28px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: #333333;
+    width: min-content;
+  }
+
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  /* Create a custom radio button */
+  .radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    border-color: #666666;
+  }
+
+  .container:focus input:enabled~.radio,
+  .container:hover input:enabled~.radio,
+  .container:active input:enabled~.radio {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    border-color: #6244bb;
+    box-shadow: 0 0 0 3px #d8d9eb, inset 0 0 0 1px #6244bb;
+  }
+
+  .container input:checked~.radio {
+    background-color: #ffffff;
+  }
+
+  .radio::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .container input:checked~.radio::after {
+    display: block;
+  }
+
+  .container .radio::after {
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #6244bb;
+  }
+
+  .container input:disabled~.radio {
+    background-color: #999999;
+    border-color: #999999;
+  }
+
+  .container input:checked:disabled~.radio {
+    background-color: #e6e6e6;
+  }
+
+  .container input:disabled~.radio::after {
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #999999;
+  }
+
+</style>
+
+<body>
+
+  <label class="container">One
+    <input type="radio" name="radio">
+    <span class="radio"></span>
+  </label>
+  <label class="container">Two
+    <input type="radio" name="radio">
+    <span class="radio"></span>
+  </label>
+  <label class="container" disabled>Three
+    <input type="radio" name="radio" checked disabled>
+    <span class="radio"></span>
+  </label>
+  <label class="container" disabled>Four
+    <input type="radio" name="radio" disabled>
+    <span class="radio"></span>
+  </label>
+
+</body>
+
+</html>
